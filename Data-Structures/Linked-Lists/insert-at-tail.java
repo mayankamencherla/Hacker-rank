@@ -32,7 +32,3 @@ Node Insert(Node head,int data) {
     
     return head;
 }
-
-    
-    return head;
-}
