@@ -1,0 +1,35 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        List<String> training = new ArrayList<String>();
+        List<String> testing = new ArrayList<String>();
+        
+        int numTraining = sc.nextInt();
+        sc.nextLine();                              // After nextInt, nextLine needs to be called to go to beginning to next line
+        
+        for(int i=0; i<numTraining; i++){
+            training.add(sc.nextLine());
+            //System.out.println(training);
+        }
+        
+        int numTesting = sc.nextInt();
+        sc.nextLine();                          // same reason
+        
+        for(int j=0; j<numTesting; j++){
+            System.out.println(Collections.frequency(training, sc.nextLine()));
+            //String curr = sc.nextLine();
+            //System.out.println(curr);
+            //int num = Collections.frequency(training,curr);
+            //System.out.println(num);
+        }
+        
+    }
+}
