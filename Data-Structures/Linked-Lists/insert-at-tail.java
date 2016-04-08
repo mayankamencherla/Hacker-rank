@@ -22,10 +22,17 @@ Node Insert(Node head,int data) {
         while(node.next != null){
             node = node.next;
         }
+        
+        // at this point node points to tail. And therefore, node.next = null
+        // so I will create a new node, and assign that to tail.next. and tail.data = data
 
         node.next = new Node(); 
         node.next.data = data;
     }
+    
+    return head;
+}
+
     
     return head;
 }
