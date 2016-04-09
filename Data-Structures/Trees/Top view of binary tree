@@ -1,0 +1,28 @@
+/*
+   class Node 
+       int data;
+       Node left;
+       Node right;
+*/
+void top_view(Node root)
+{
+   if(root==null) return;
+    
+    traverse_left(root.left);
+    System.out.print(root.data + " ");
+    traverse_right(root.right);
+}
+
+void traverse_left(Node root){
+    if(root==null) return;
+    
+    traverse_left(root.left);
+    System.out.print(root.data + " ");
+}
+
+void traverse_right(Node root){
+    if(root==null) return;
+    
+    System.out.print(root.data + " ");
+    traverse_right(root.right);
+}
