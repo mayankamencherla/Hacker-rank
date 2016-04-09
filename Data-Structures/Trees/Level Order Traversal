@@ -1,0 +1,26 @@
+/* 
+
+    class Node 
+       int data;
+       Node left;
+       Node right;
+   */
+void LevelOrder(Node root){
+    
+    /* my algorithm is as follows
+    I am going to create a queue that push each node, starting from root, pops it and prints and the its children in order */
+    
+    Deque<Node> deque = new LinkedList<Node>();
+    
+    deque.addLast(root);
+    
+    while(!deque.isEmpty()){
+        
+        Node node = deque.removeFirst();
+        System.out.print(node.data+" ");
+        
+        if(node.left != null) deque.addLast(node.left);
+        
+        if(node.right != null) deque.addLast(node.right);
+    }
+}
