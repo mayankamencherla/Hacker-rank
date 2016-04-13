@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+N = int(raw_input())
+L = []
+
+for i in range(0,N):
+    command = raw_input().split()
+    #print command
+    if(command[0] == 'insert'):
+        L.insert(int(command[1]),int(command[2]))
+    if(command[0] == 'remove'):
+        L.remove(int(command[1]))
+    if(command[0] == 'print'):
+        print L
+    if(command[0] == 'reverse'):    
+        L.reverse()
+    if(command[0] == 'append'):
+        L.append(int(command[1]))
+    if(command[0] == 'pop'):
+        L.pop()
+    if(command[0] == 'sort'):        
+        L.sort()
