@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+N = int(raw_input())
+a = {}
+
+for i in range(0,N):
+    temp = raw_input().split()
+    a[temp[0]] = (temp[1],temp[2],temp[3])
+    
+dict_val = raw_input()
+
+avg = (float(a[dict_val][0]) + float(a[dict_val][1]) + float(a[dict_val][2]))/3
+    
+print '%.2f' %avg
