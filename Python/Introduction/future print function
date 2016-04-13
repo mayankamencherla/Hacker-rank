@@ -1,0 +1,6 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from __future__ import print_function
+
+N = int(raw_input())
+
+print(*range(1, N+1), sep='') #This prints from 1 to N, seperated by no space ''
