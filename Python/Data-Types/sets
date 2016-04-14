@@ -1,0 +1,23 @@
+# This code takes in two lists and returns the ascending order solution to their difference sets 
+
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+M = int(raw_input()) # Number of elements of first set
+a = map(int,raw_input().split())
+set_a = set()
+set_a.update(a)
+
+N = int(raw_input()) # Number of elements of first set
+b = map(int,raw_input().split())
+set_b = set()
+set_b.update(b)
+
+c = set()
+c.update(set_a.difference(set_b))
+c.update(set_b.difference(set_a))
+c = list(sorted(c))
+
+#create new list to get the set values in 
+for i in range(0,len(c)):
+    print c[i]
+
