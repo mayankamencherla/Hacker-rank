@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Code takes in N student's scores and returns the lowest score of the list, if 2 students have the same score, their names are returned
+# in sorted manner
+
+
+
+N = int(raw_input())
+
+students = []
+
+for i in range(0,N):
+    students.append([raw_input(),float(raw_input())])
+    
+    
+minimum =  min(students[0:N][1])
+
+students.sort()
+
+for i in range(0,N):
+    if students[i][1] == minimum:
+        print students[i][0]
