@@ -1,0 +1,5 @@
+# This snippet of code shows how to split a string into substrings and then rejoin the strings with hyphens in between
+
+inputString = raw_input().split()
+
+print "-".join(inputString)
