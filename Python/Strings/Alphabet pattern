@@ -1,0 +1,50 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import string
+
+size = int(input())                         # We need to create 2*size-1 lines
+alphabet = string.ascii_lowercase           # This retrieves all the alphabets in the lower case
+
+for i in range(size-1,0,-1):                # from size -1 to 0 in steps of -1
+    row = ["-"]*(2*size-1)                  # row now contains 2*size-1 hyphens
+    for j in range(0,size-i):               # This loop runs from 0 to size - i
+        row[size-1-j] = alphabet[i+j]
+        row[size-1+j] = alphabet[i+j]       # We need a symmetric alphabet pattern around the center index size-1
+    print ("-".join(row))                   # Creates the first half of the pattern
+    
+for i in range(0,size):                     # second half of the pattern
+    row = ["-"]*(2*size-1)                  # recreating pattern
+    for j in range(0,size-i):
+        row[size-1-j] = alphabet[i+j]
+        row[size-1+j] = alphabet[i+j]       # We need a symmetric alphabet pattern around the center index size-1
+    print ("-".join(row))    
+    
+    
+# First part of the loop runs from size-1 to 0 and second half from 0 to size, as they mirror one another
+
+
+
+
+
+
+# for size 10, the pattern looks like this:
+#size 10
+
+------------------j------------------
+----------------j-i-j----------------
+--------------j-i-h-i-j--------------
+------------j-i-h-g-h-i-j------------
+----------j-i-h-g-f-g-h-i-j----------
+--------j-i-h-g-f-e-f-g-h-i-j--------
+------j-i-h-g-f-e-d-e-f-g-h-i-j------
+----j-i-h-g-f-e-d-c-d-e-f-g-h-i-j----
+--j-i-h-g-f-e-d-c-b-c-d-e-f-g-h-i-j--
+j-i-h-g-f-e-d-c-b-a-b-c-d-e-f-g-h-i-j
+--j-i-h-g-f-e-d-c-b-c-d-e-f-g-h-i-j--
+----j-i-h-g-f-e-d-c-d-e-f-g-h-i-j----
+------j-i-h-g-f-e-d-e-f-g-h-i-j------
+--------j-i-h-g-f-e-f-g-h-i-j--------
+----------j-i-h-g-f-g-h-i-j----------
+------------j-i-h-g-h-i-j------------
+--------------j-i-h-i-j--------------
+----------------j-i-j----------------
+------------------j------------------
