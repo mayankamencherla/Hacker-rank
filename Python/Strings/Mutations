@@ -1,0 +1,12 @@
+# Takes in a string as input, and index and a letter. Replaces input at index with the new letter and prints output
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+inputString = raw_input()
+
+nextLine = raw_input().split()
+
+index, inputLetter = int(nextLine[0]), nextLine[1]
+
+#inputLetter = raw_input()
+
+print inputString[:index] + inputLetter + inputString[index+1:]
