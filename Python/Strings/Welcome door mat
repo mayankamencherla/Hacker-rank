@@ -1,0 +1,21 @@
+# To create a welcome board of N*3M size
+
+N, M = map(int,raw_input().split())               # takes in the values of N and M
+for i in xrange(1,N,2):           
+    print (".|."*i).center(M,"-")                 # prints .|. times i centered with - on either side
+print "WELCOME".center(M,"-")                     # prints the welcome
+for i in xrange(N-2,-1,-2): 
+    print (".|."*i).center(M,"-")                 # prints .|. times i centered with - on either side
+
+
+# output looks like this:
+
+------------.|.------------
+---------.|..|..|.---------
+------.|..|..|..|..|.------
+---.|..|..|..|..|..|..|.---
+----------WELCOME----------
+---.|..|..|..|..|..|..|.---
+------.|..|..|..|..|.------
+---------.|..|..|.---------
+------------.|.------------
