@@ -1,12 +1,7 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 
-# This code capitalizes only first letter of each word
+# This code capitalizes only first letter of each word using the title built in function
 
-inputString = raw_input().split()                               # Splits string into substrings
+# Enter your code here. Read input from STDIN. Print output to STDOUT
 
-for i in range(0,len(inputString)):                             # capitalizes each word individually
-    currString = inputString[i]
-    currString = currString[:1].upper() + currString[1:]
-    inputString[i] = currString
-    
-print " ".join(inputString)                                     # rejoins list with space " " in between and prints 
+print (raw_input().title())
