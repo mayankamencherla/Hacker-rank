@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# This code takes in a string, and a length, and prints each substrings of length = length
+
+import textwrap
+
+inputString, length = raw_input(), int(raw_input())
+
+print textwrap.fill(inputString,length)
