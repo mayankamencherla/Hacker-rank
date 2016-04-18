@@ -1,0 +1,7 @@
+# This code converts lower case strings to upper, and upper to lower case letters.
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+inputString = raw_input()
+
+print inputString.swapcase()
