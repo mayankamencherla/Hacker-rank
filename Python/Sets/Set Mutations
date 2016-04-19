@@ -1,0 +1,18 @@
+# Unions, difference etc don't make a difference to the set, therefore the update function is used
+# this snippet shows how to use it. 
+# I use getattr to just use whatever passed in command to the set and let the in built functions take care of itself
+# GREAT TRICK!!
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+numA = input()
+
+A = set(map(int,raw_input().split()))
+
+numCases = input()
+
+for i in range(numCases):
+    pair = raw_input().split()
+    new_set = set(map(int,raw_input().split()))
+    getattr(A,pair[0])(new_set)
+    
+print sum(A)
