@@ -4,7 +4,7 @@
 
 n,m = raw_input().split()
 
-arr = set(map(int,raw_input().split()))
+arr = list(map(int,raw_input().split()))
 
 A = set(map(int,raw_input().split()))
 B = set(map(int,raw_input().split()))
