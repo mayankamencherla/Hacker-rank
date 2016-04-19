@@ -1,5 +1,5 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-# This snippet of code takes in 2 sets and computes the union of the two sets
+# This snippet of code takes in 2 sets and computes the intersection of the two sets
 
 numEnglish = input()
 
