@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# This snippet of code takes in 2 sets and computes the symmetric difference of the two sets
+
+numEnglish = input()
+
+rollEnglish = set(map(int,raw_input().split()))
+
+numFrench = input()
+
+rollFrench = set(map(int,raw_input().split()))
+
+print len(rollEnglish.symmetric_difference(rollFrench))
