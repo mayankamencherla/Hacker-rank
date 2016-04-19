@@ -1,0 +1,12 @@
+# Basic program that adds all the words one by one and outputs number of distinct words
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+numValue = int(raw_input())
+
+s = set('')
+
+while(numValue>0):
+    s.add(raw_input())
+    numValue += -1
+    
+print len(s)
