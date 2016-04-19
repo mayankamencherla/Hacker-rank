@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# input is of this form: n contains the elements in array to be looked at, m is the number of elements in the disjoint sets A and B
+# if there contains any numbers in A also in the input array(arr) then happiness adds by 1, similarly for B, happiness reduces by 1
+
+n,m = raw_input().split()
+
+arr = set(map(int,raw_input().split()))
+
+A = set(map(int,raw_input().split()))
+B = set(map(int,raw_input().split()))
+
+# Basically this checks if x is in A, adds 1, checks if x is in B, subtracts 1 for all the values of x in array
+count = [0+1 if x in A else 0-1 if x in B else 0+0 for x in arr]                    
+
+print sum(count)
+ 
