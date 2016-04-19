@@ -1,0 +1,15 @@
+# Finding the angle MBC where M is the mid-point of hypotenuse of right angle triangle.
+# https://www.hackerrank.com/challenges/find-angle?h_r=next-challenge&h_v=legacy
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# angle BMC = 90, and therefore MBC is equal to ACB = cos inverse of BC/hyp
+# This is because the median divides the triangle into 2 isosceles triangles. Therefore ACB = MBC
+
+import math
+
+AB = input(); BC = input()
+
+hyp = math.sqrt( math.pow(AB,2) + math.pow(BC,2) )
+
+print ( str(int(round(math.degrees( math.acos(BC/hyp) ) ))) + "°" )
