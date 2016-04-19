@@ -1,0 +1,27 @@
+# To find if there are more substrings starting with vowels or consonants given a word
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# Kevin makes words starting with vowels, Stuart with consonants
+
+word = raw_input()             
+vowels = 'AEIOU'
+
+kevscore = 0
+stuscore = 0
+
+for i in range(len(word)):
+    if word[i] in vowels:
+        kevscore += len(word) - i                 # This is true because once the vowel hits, we count substrings to the end
+    else:
+        stuscore += len(word) - i
+
+if(kevscore > stuscore):
+    print "Kevin" , kevscore
+    
+    
+elif(kevscore < stuscore):
+    print "Stuart" , stuscore
+    
+else:
+    print "Draw"
