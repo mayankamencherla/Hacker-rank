@@ -1,0 +1,13 @@
+# Takes in set A, and then prints True if all the other sets are supersets of A, or prints false
+
+A = set(raw_input().split())
+
+boolval = "True"
+
+for i in range(input()):
+    B = set(raw_input().split())
+    if not A.issuperset(B):
+        boolval = "False"
+        break
+        
+print boolval
