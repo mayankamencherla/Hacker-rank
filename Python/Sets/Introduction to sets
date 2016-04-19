@@ -1,0 +1,8 @@
+# Computes the average of the distinct values of input
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+N = int(raw_input())
+
+s = set(map(int,raw_input().split()))
+
+print "%.2f" %(float(sum(s))/len(s))
