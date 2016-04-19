@@ -1,0 +1,13 @@
+# Takes in some commands and finally prints the sum of elements in set
+
+n = input()
+s = set(map(int, raw_input().split())) 
+
+numCommands = input()
+
+for i in range(numCommands):
+    command = raw_input().split()
+    arg = command[1] if len(command)==2 else ""      # This evaluates arg if length of command is 2 to be the number to be removed
+    eval("s." + command[0] + "("+arg+")")            # translates in English to s.command[0](arg)
+    
+print sum(s)
