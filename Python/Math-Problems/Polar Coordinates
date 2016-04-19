@@ -1,0 +1,8 @@
+# Complex number x + yj is represented as (r,phi)
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import cmath
+ComplexNo = complex(input())
+
+print abs(ComplexNo)
+print cmath.phase(ComplexNo)
