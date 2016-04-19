@@ -1,0 +1,16 @@
+# https://www.hackerrank.com/challenges/py-the-captains-room
+
+# to find the 1 unique number out of infinite list which K repitions of numbers
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+K = input()                                                 # num Families
+
+roomsList = list(map(int,raw_input().split()))              # contains K repititions of the family rooms + 1 captain room
+
+roomSet = set(roomsList)                                    # contains 1 value of all rooms
+
+# sum(roomSet)*K - sum(roomsList)will give (K-1)*captains room
+
+print ( sum(roomSet)*K - sum(roomsList) ) / (K-1)
+
