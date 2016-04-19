@@ -2,6 +2,4 @@
 
 # This code capitalizes only first letter of each word using the title built in function
 
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-
-print (raw_input().title())
+print(" ".join((s.capitalize() for s in raw_input().split(" ")))) # splits based on spaces
